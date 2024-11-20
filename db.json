@@ -1,0 +1,24 @@
+{
+    "famousLocations": [
+        {
+            "id": 1,
+            "name": "Delhi"
+        },
+        {
+            "id": 2,
+            "name": "Mumbai"
+        },
+        {
+            "id": 3,
+            "name": "Kolkata"
+        },
+        {
+            "id": 4,
+            "name": "Chennai"
+        },
+        {
+            "id": 5,
+            "name": "Bangalore"
+        }
+    ]
+}
