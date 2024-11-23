@@ -1,38 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, Container, Button, Dropdown, DropdownButton, ButtonGroup } from "react-bootstrap";
+import {
+	Navbar,
+	Nav,
+	Container,
+	Button,
+	Dropdown,
+	DropdownButton,
+	ButtonGroup,
+} from "react-bootstrap";
 import { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const CustomNavbar = () => {
+	const [location, setLocation] = useState("");
 	const [famousLocation, setFamousLocation] = useState([]);
-	
+	const [display, setDisplay] = useState("Select Location");
+
+	const handleLocationChange = (event) => {
+		event.preventDefault();
+		setLocation(event.target.value);
+	};
+
 	useEffect(() => {
 		fetchFamousLocation();
-	}, [])
+	}, []);
 
 	const fetchFamousLocation = async () => {
 		try {
-			const response = await axios.get("http://localhost:3000/famousLocations")
-			setFamousLocation(response.data)
+			const response = await axios.get("http://localhost:3000/famousLocations");
+			setFamousLocation(response.data);
+		} catch (error) {
+			console.log("Error fetching locations...");
 		}
-		catch (error) {
-			console.log("Error fetching locations...")
-		}
-	}
+	};
+
+
 	return (
 		<>
-			<Navbar expand="lg" style={{ background: "#33372C", height: "6vh" }}>
+			<Navbar
+				expand="lg"
+				className="custom-navbar"
+				style={{ background: "#33372C", height: "6vh" }}
+			>
 				<Container>
-					<Navbar.Brand href="/" style={{ color: "#FFE5CF" }}>
+					<Navbar.Brand as={Link} to="/" style={{ color: "#FFE5CF" }}>
 						Freshly
 					</Navbar.Brand>
-					<Navbar.Toggle
-						aria-controls="basic-navbar-nav"
-						style={{ backgroundColor: "#FFE5CF" }}
-					/>
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto flex-grow-1">
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav" style={{ margin: "1rem" }}>
+						<Nav className="me-auto flex-grow-1 d-flex align-items-center">
 							<input
 								name="search"
 								style={{
@@ -43,30 +60,45 @@ const CustomNavbar = () => {
 								placeholder="🔍 Search for products"
 							/>
 						</Nav>
-						<Nav className="ms-auto">
-							<DropdownButton
+						<Nav className="ms-auto d-flex align-items-center">
+							<Dropdown
 								as={ButtonGroup}
-								title="Select Location"
 								style={{
 									background: "#557C56",
 									color: "white",
 									margin: "0.5rem",
 								}}
 							>
-								<Dropdown.Item eventKey="1">
-									<input type="text" name='location' placeholder="Search" style={{ borderRadius: '0.2rem' }} />
-									{famousLocation.map((location) => {
-										<li>{location}</li>
-									})}
-								</Dropdown.Item>
-								<Dropdown.Divider />
-								<Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-							</DropdownButton>
+								<Dropdown.Toggle>{display}</Dropdown.Toggle>
+								<Dropdown.Menu>
+									<input
+										type="text"
+										value={location}
+										onChange={handleLocationChange}
+										placeholder="Search Location"
+										style={{
+											borderRadius: "0.5rem",
+											padding: "0.5rem",
+											margin: "0.5rem",
+										}}
+									/>
+									<Dropdown.Divider />
+									{famousLocation.map((location) => (
+										<Dropdown.Item
+											key={location.id}
+											value={location.name}
+											onClick={() => setDisplay(location.name)}
+										>
+											{location.name}
+										</Dropdown.Item>
+									))}
+								</Dropdown.Menu>
+							</Dropdown>
 							<Button
 								style={{
 									background: "#557C56",
 									color: "white",
-									marginRight: "0.5rem",
+									marginLeft: "0.5rem",
 									marginRight: "0.5rem",
 									marginTop: "0.5rem",
 									marginBottom: "0.5rem",
@@ -74,6 +106,7 @@ const CustomNavbar = () => {
 							>
 								Login / Signup
 							</Button>
+							<Button style={{background: "white"}}>🛍️</Button>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
