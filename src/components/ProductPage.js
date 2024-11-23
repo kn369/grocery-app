@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 
 const ProductPage = (props) => {
 	const [products, setProducts] = useState([]);
-   const { link } = props;
+	const { link } = props;
 	const fetchProducts = async () => {
 		try {
 			const response = await axios.get("http://localhost:3000/" + link);
@@ -23,13 +23,22 @@ const ProductPage = (props) => {
 	return (
 		<>
 			<CustomNavbar />
-			{products.map((product) => {
-				return (
-					<div>
-						<ProductCard {...product} />
-					</div>
-				);
-			})}
+			<div>
+				<h1
+					style={{ display: "flex", justifyContent: "center", margin: "1vw" }}
+				>
+					Fruits
+				</h1>
+				<div style={{margin: '1rem'}}>
+					{products.map((product) => {
+						return (
+							<div style={{margin: "0.5rem"}}>
+								<ProductCard {...product} />
+							</div>
+						);
+					})}
+				</div>
+			</div>
 		</>
 	);
 };

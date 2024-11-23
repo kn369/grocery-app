@@ -7,6 +7,7 @@ import Vegetables from "./pages/Vegetables";
 import DairyAndBakery from "./pages/DairyAndBakery";
 import Stationary from "./pages/Stationary";
 import Beverages from "./pages/Beverages";
+import Profile from "./pages/Profile";
 
 const App = () => {
 	return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/dairyandbakery" element={<DairyAndBakery />} />
             <Route path="/stationary" element={<Stationary />} />
             <Route path="/beverages" element={<Beverages />} />
+            <Route path="/profile" element={<Profile />} />
 			</Routes>
 		</BrowserRouter>
 	);

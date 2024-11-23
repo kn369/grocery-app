@@ -8,14 +8,20 @@ import {
 	Dropdown,
 	DropdownButton,
 	ButtonGroup,
+	Offcanvas,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Login from "./Login";
+import SignUp from "./SignUp";
 
 const CustomNavbar = () => {
 	const [location, setLocation] = useState("");
 	const [famousLocation, setFamousLocation] = useState([]);
 	const [display, setDisplay] = useState("Select Location");
+	const [showLogin, setShowLogin] = useState(false);
+	const [showSignup, setShowSignup] = useState(false);
+	const [user, setUser] = useState(null);
 
 	const handleLocationChange = (event) => {
 		event.preventDefault();
@@ -24,6 +30,7 @@ const CustomNavbar = () => {
 
 	useEffect(() => {
 		fetchFamousLocation();
+		setUser(JSON.parse(localStorage.getItem("user")));
 	}, []);
 
 	const fetchFamousLocation = async () => {
@@ -35,7 +42,7 @@ const CustomNavbar = () => {
 		}
 	};
 
-
+	console.log(!user);
 	return (
 		<>
 			<Navbar
@@ -95,6 +102,9 @@ const CustomNavbar = () => {
 								</Dropdown.Menu>
 							</Dropdown>
 							<Button
+								onClick={() => {
+									setShowLogin(true);
+								}}
 								style={{
 									background: "#557C56",
 									color: "white",
@@ -104,13 +114,148 @@ const CustomNavbar = () => {
 									marginBottom: "0.5rem",
 								}}
 							>
-								Login / Signup
+								{user ? user.email : "Login/Signup"}
 							</Button>
-							<Button style={{background: "white"}}>🛍️</Button>
+
+							<Button style={{ background: "white" }}>🛍️</Button>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
+			{showLogin && !user && (
+				<div
+					onClick={() => setShowLogin(false)}
+					style={{
+						position: "fixed",
+						zIndex: "1000",
+						top: "0",
+						left: "0",
+						height: "100vh",
+						width: "100vw",
+						background: "rgba(0,0,0,0.5)",
+						backdropFilter: "blur(5px)",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				>
+					<div
+						onClick={(e) => e.stopPropagation()}
+						style={{
+							width: "50vw",
+							background: "whitesmoke",
+							borderRadius: "1rem",
+							padding: "1rem",
+						}}
+					>
+						<Login />
+
+						<p style={{ marginTop: "1rem" }}>
+							Don't have an account?{" "}
+							<u
+								style={{ color: "blue" }}
+								onClick={() => {
+									setShowSignup(true);
+									setShowLogin(false);
+								}}
+							>
+								{" "}
+								Sign up
+							</u>
+						</p>
+					</div>
+				</div>
+			)}
+
+			{showSignup && (
+				<div
+					onClick={() => setShowSignup(false)}
+					style={{
+						position: "fixed",
+						zIndex: "1000",
+						top: "0",
+						left: "0",
+						height: "100vh",
+						width: "100vw",
+						background: "rgba(0,0,0,0.5)",
+						backdropFilter: "blur(5px)",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				>
+					<div
+						onClick={(e) => e.stopPropagation()}
+						style={{
+							width: "50vw",
+							background: "whitesmoke",
+							borderRadius: "1rem",
+							padding: "1rem",
+						}}
+					>
+						<SignUp />
+						<p style={{ marginTop: "1rem" }}>
+							Already have an account?{" "}
+							<u
+								style={{ color: "blue" }}
+								onClick={() => {
+									setShowSignup(false);
+									setShowLogin(true);
+								}}
+							>
+								{" "}
+								Login
+							</u>
+						</p>
+					</div>
+				</div>
+			)}
+
+			{showLogin && user && (
+				<div
+					onClick={() => setShowLogin(false)}
+					style={{
+						position: "fixed",
+						zIndex: "1000",
+						top: "0",
+						left: "0",
+						height: "100vh",
+						width: "100vw",
+						background: "rgba(0,0,0,0.5)",
+						backdropFilter: "blur(5px)",
+						display: "flex",
+						justifyContent: "flex-end",
+						alignItems: "flex-start",
+					}}
+				>
+					<div
+						onClick={(e) => e.stopPropagation()}
+						style={{
+							background: "whitesmoke",
+							borderRadius: "1rem",
+							padding: "1rem",
+							margin: "1rem",
+						}}
+					>
+						<h1>Welcome {user.name ? user.name : user.email}</h1>
+						<p>{user.email}</p>
+
+						<div style={{ display: "flex", justifyContent: "space-between" }}>
+							<Button href="/profile" target="_blank">update profile</Button>
+							<Button
+								variant="danger"
+								onClick={() => {
+									localStorage.removeItem("user");
+									setUser(null);
+									alert("Logged out successfully");
+								}}
+							>
+								Logout
+							</Button>
+						</div>
+					</div>
+				</div>
+			)}
 		</>
 	);
 };
