@@ -3,57 +3,58 @@ import React, { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 
 const ProductCard = (props) => {
-	const { name, price } = props;
+	const {id, name, price } = props;
 	const [user, setUser] = useState({});
 	const [quantity, setQuantity] = useState(0);
 	const [cart, setCart] = useState([]);
 
 	const fetchUser = async () => {
-		try {
-			const response = await axios.get("http://localhost:3000/users/" + JSON.parse(localStorage.getItem("user")).id);
-			setUser(response.data);
-			const initialCart = user.cart;
-			if (initialCart) {
-				setCart(initialCart);
-         }
-         else {
-            setCart([]);
-         }
-		} catch (error) {
-			console.log("Error fetching user data ...");
+		const id = JSON.parse(localStorage.getItem("user")).id;
+		const response = await axios.get(
+			'http://localhost:3000/users/' + id
+		);
+		setUser(response.data);
+		console.log(user)
+	}
+
+	const fetchCart = async () => {
+		const temp = user.cart;
+		if (temp === undefined) {
+			setCart([]);
+			
 		}
-	};
+		else {
+			setCart(temp);
+		}
+	}
 
 	useEffect(() => {
 		fetchUser();
-		console.log(user);
 	}, []);
 
-   const updateCart = async () => {
-      try {
-         const response = await axios.put("http://localhost:3000/users/" + user.id, { ...user, cart: cart });
-         console.log(response.data);
-      }
-      catch (error) {
-         console.log("Error updating cart ...");
-      }
-   }
+	useEffect(() => {
+		fetchCart();
+	}, [user]);
 
 	const increase = () => {
-      setQuantity(quantity + 1);
-      const updatedCart = cart.map((product) => {
-         if (product.name === name) {
-            return { ...product, quantity: product.quantity + 1 };
-         }
-         return product;
-      })
-	};
+		setQuantity(quantity + 1);
+		let index = cart.findIndex((item) => item.name === name);
+		if (index === -1) {
+			setCart([...cart, { name: name, price: price, quantity: 1 }]);
+		}
+		else {
+			let temp = [...cart];
+			temp[index].quantity += 1;
+			setCart(temp);
+		}
+		console.log(cart);
+	}
 
 	const decrease = () => {
-		if (quantity > 0) {
-			setQuantity(quantity - 1);
-		}
-	};
+		setQuantity(quantity - 1);
+	}
+
+	
 
 	return (
 		<Card>
