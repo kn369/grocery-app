@@ -9,11 +9,14 @@ const ProductPage = (props) => {
 	const { link } = props;
 	const [cart, setCart] = useState([]);
 
+
+
 	const fetchCart = async () => {
 		const temp = products.map((item) => {
 			if (localStorage.getItem(item.name) !== null) {
 				return { item: item.name, quantity: localStorage.getItem(item.name) };
 			}
+			return { item: item.name, quantity: 0 };
 		});
 		console.log(temp);
 		try {
@@ -31,7 +34,7 @@ const ProductPage = (props) => {
 		} catch (error) {
 			console.log("Error fetching cart ...");
 		}
-		console.log(temp);
+		setCart(temp);
 	};
 
 	const fetchProducts = async () => {
@@ -43,13 +46,27 @@ const ProductPage = (props) => {
 		}
 	};
 
+	const uploadCart = async () => {
+		const userID = JSON.parse(localStorage.getItem("user")).id;
+		try {
+			const response = await axios.get("http://localhost:3000/users/" + userID);
+			const user = response.data;
+			const updatedUser = { ...user, cart: cart };
+			console.log(updatedUser);
+		} catch (error) {
+			console.log("Error uploading cart ...");
+		}
+	};
+
 	useEffect(() => {
 		fetchProducts();
 	}, []);
 
 	useEffect(() => {
 		fetchCart();
-	});
+	}, []);
+
+	useEffect(() => {});
 
 	return (
 		<>
@@ -63,7 +80,7 @@ const ProductPage = (props) => {
 				<div style={{ margin: "1rem" }}>
 					{products.map((product) => {
 						return (
-							<div style={{margin: "0.5rem"}}>
+							<div style={{ margin: "0.5rem" }}>
 								<ProductCard {...product} key={product.id} />
 							</div>
 						);
