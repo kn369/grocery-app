@@ -34,6 +34,7 @@ const SignUp = () => {
 					id: uuidv4(), // Generate a unique ID
 					email: email,
 					password: password,
+					cart: []
 				});
 				alert("Signed up successfully");
 			} catch (error) {

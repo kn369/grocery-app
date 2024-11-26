@@ -58,13 +58,13 @@ const ProductPage = (props) => {
 				<h1
 					style={{ display: "flex", justifyContent: "center", margin: "1vw" }}
 				>
-					Fruits
+					{link}
 				</h1>
 				<div style={{ margin: "1rem" }}>
 					{products.map((product) => {
 						return (
-							<div style={{ margin: "0.5rem" }}>
-								<ProductCard {...product} />
+							<div style={{margin: "0.5rem"}}>
+								<ProductCard {...product} key={product.id} />
 							</div>
 						);
 					})}
