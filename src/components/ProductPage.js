@@ -1,6 +1,6 @@
 import React from "react";
 import CustomNavbar from "../components/CustomNavbar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 
@@ -8,17 +8,9 @@ const ProductPage = (props) => {
 	const [products, setProducts] = useState([]);
 	const { link } = props;
 	const [cart, setCart] = useState([]);
-
-
+	const ref = useRef(true);
 
 	const fetchCart = async () => {
-		const temp = products.map((item) => {
-			if (localStorage.getItem(item.name) !== null) {
-				return { item: item.name, quantity: localStorage.getItem(item.name) };
-			}
-			return { item: item.name, quantity: 0 };
-		});
-		console.log(temp);
 		try {
 			const userID = JSON.parse(localStorage.getItem("user")).id;
 			if (userID) {
@@ -27,15 +19,32 @@ const ProductPage = (props) => {
 				);
 				if (response.data.cart) {
 					setCart(response.data.cart);
-				} else {
+					response.data.cart.forEach((item) => {
+						localStorage.setItem(item.name, item.quantity);
+					});
+				}
+				else {
 					setCart([]);
 				}
 			}
 		} catch (error) {
 			console.log("Error fetching cart ...");
 		}
-		setCart(temp);
 	};
+
+	const updateCart = () => {
+		const temp = products.map((item) => {
+			if (localStorage.getItem(item.name) !== null) {
+				return {
+					item: item.name,
+					quantity: localStorage.getItem(item.name),
+				};
+			}
+			return { item: item.name, quantity: 0 };
+		});
+		console.log(temp)
+		setCart(temp);
+	}
 
 	const fetchProducts = async () => {
 		try {
@@ -51,10 +60,11 @@ const ProductPage = (props) => {
 		try {
 			const response = await axios.get("http://localhost:3000/users/" + userID);
 			const user = response.data;
-			const updatedUser = { ...user, cart: cart };
-			console.log(updatedUser);
+			const updatedCart = [...user.cart, ...cart ];
+			const updatedUser = { ...user, cart: updatedCart };
+			await axios.put(`http://localhost:3000/users/${userID}`, updatedUser);
 		} catch (error) {
-			console.log("Error uploading cart ...");
+			console.log("Error uploading cart ...", error);
 		}
 	};
 
@@ -66,7 +76,14 @@ const ProductPage = (props) => {
 		fetchCart();
 	}, []);
 
-	useEffect(() => {});
+	useEffect(() => {
+		if (ref.current) {
+			ref.current = false;
+			return;
+		}
+		console.log(cart);
+		uploadCart();
+	},[cart]);
 
 	return (
 		<>
@@ -81,7 +98,7 @@ const ProductPage = (props) => {
 					{products.map((product) => {
 						return (
 							<div style={{ margin: "0.5rem" }}>
-								<ProductCard {...product} key={product.id} />
+								<ProductCard {...product} key={product.id} update={updateCart} />
 							</div>
 						);
 					})}

@@ -4,40 +4,30 @@ import { Card, Button } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 
 const ProductCard = (props) => {
-	const { id, name, price} = props;
+	const { id, name, price, update } = props;
 	const [user, setUser] = useState({});
 	const [quantity, setQuantity] = useState(0);
 
-	const fetchUser = async () => {
-		if (localStorage.getItem("user") === null) {
-			return;
-		}
-		const id = JSON.parse(localStorage.getItem("user")).id;
-		const response = await axios.get("http://localhost:3000/users/" + id);
-		setUser(response.data);
-		console.log(user);
-	};
-
-	useEffect(() => {
-		fetchUser();
-	}, []);
 
 	useEffect(() => {
 		if (localStorage.getItem(name) !== null) {
 			setQuantity(parseInt(localStorage.getItem(name)));
 		}
-	});
+	},[]);
 
 	const increase = () => {
 		setQuantity(quantity + 1);
 		localStorage.setItem(name, quantity + 1);
+		update();
 	};
 
 	const decrease = () => {
-		setQuantity(quantity - 1);
-		localStorage.setItem(name, quantity - 1);
+		if (quantity > 0) {
+			setQuantity(quantity - 1);
+			localStorage.setItem(name, quantity - 1);
+			update();
+		}
 	};
-
 
 	return (
 		<Card>

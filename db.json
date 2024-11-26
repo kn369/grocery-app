@@ -292,7 +292,8 @@
 			"id": "5",
 			"name": "Charlie Davis",
 			"email": "charliedavis@gmail.com",
-			"password": "charliedavis123"
+			"password": "charliedavis123",
+			"cart": []
 		},
 		{
 			"id": "5e6e2497-1734-4268-960a-bb845e9b1c55",
