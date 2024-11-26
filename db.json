@@ -59,35 +59,40 @@
       "name": "Apple",
       "price": 100,
       "quantity": 10,
-      "category": "Fresh Fruits"
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/apple.jpg"
     },
     {
       "id": "2",
       "name": "Banana",
       "price": 50,
       "quantity": 20,
-      "category": "Fresh Fruits"
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/Banana.jpg"
     },
     {
       "id": "3",
       "name": "Mango",
       "price": 150,
       "quantity": 5,
-      "category": "Fresh Fruits"
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/mango.jpg"
     },
     {
       "id": "4",
       "name": "Orange",
       "price": 80,
       "quantity": 15,
-      "category": "Fresh Fruits"
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/orange.jpg"
     },
     {
       "id": "5",
       "name": "Pineapple",
       "price": 120,
       "quantity": 8,
-      "category": "Fresh Fruits"
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/pineapple.jpg"
     }
   ],
   "Stationary": [
@@ -96,35 +101,40 @@
       "name": "Pen",
       "price": 10,
       "quantity": 100,
-      "category": "Stationary"
+      "category": "Stationary",
+      "image": "../resources/photos/pen.jpg"
     },
     {
       "id": "2",
       "name": "Pencil",
       "price": 5,
       "quantity": 200,
-      "category": "Stationary"
+      "category": "Stationary",
+      "image": "../resources/photos/pencil.jpg"
     },
     {
       "id": "3",
       "name": "Eraser",
       "price": 2,
       "quantity": 300,
-      "category": "Stationary"
+      "category": "Stationary",
+      "image": "../resources/photos/eraser.jpg"
     },
     {
       "id": "4",
       "name": "Sharpener",
       "price": 3,
       "quantity": 150,
-      "category": "Stationary"
+      "category": "Stationary",
+      "image": "../resources/photos/sharpner.jpg"
     },
     {
       "id": "5",
       "name": "Scale",
       "price": 5,
       "quantity": 100,
-      "category": "Stationary"
+      "category": "Stationary",
+      "image": "../resources/photos/scale.jpg"
     }
   ],
   "Vegetables": [
@@ -133,35 +143,40 @@
       "name": "Potato",
       "price": 20,
       "quantity": 50,
-      "category": "Fresh Vegetables"
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/potato.jpg"
     },
     {
       "id": "2",
       "name": "Tomato",
       "price": 30,
       "quantity": 40,
-      "category": "Fresh Vegetables"
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/tomato.jpg"
     },
     {
       "id": "3",
       "name": "Onion",
       "price": 25,
       "quantity": 60,
-      "category": "Fresh Vegetables"
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/onion.jpg"
     },
     {
       "id": "4",
       "name": "Carrot",
       "price": 40,
       "quantity": 30,
-      "category": "Fresh Vegetables"
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/carrot.jpg"
     },
     {
       "id": "5",
       "name": "Cabbage",
       "price": 35,
       "quantity": 20,
-      "category": "Fresh Vegetables"
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/cabbage.jpg"
     }
   ],
   "DairyAndBakery": [
@@ -170,35 +185,40 @@
       "name": "Milk",
       "price": 25,
       "quantity": 50,
-      "category": "Dairy & Bakery"
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/milk.jpg"
     },
     {
       "id": "2",
       "name": "Butter",
       "price": 50,
       "quantity": 30,
-      "category": "Dairy & Bakery"
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/butter.jpg"
     },
     {
       "id": "3",
       "name": "Cheese",
       "price": 100,
       "quantity": 20,
-      "category": "Dairy & Bakery"
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/cheese.jpg"
     },
     {
       "id": "4",
       "name": "Bread",
       "price": 20,
       "quantity": 40,
-      "category": "Dairy & Bakery"
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/bread.jpg"
     },
     {
       "id": "5",
       "name": "Cake",
       "price": 150,
       "quantity": 10,
-      "category": "Dairy & Bakery"
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/cake.jpg"
     }
   ],
   "Beverages": [
@@ -207,35 +227,40 @@
       "name": "Tea",
       "price": 10,
       "quantity": 100,
-      "category": "Beverages"
+      "category": "Beverages",
+      "image": "../resources/photos/tea.jpg"
     },
     {
       "id": "2",
       "name": "Coffee",
       "price": 15,
       "quantity": 80,
-      "category": "Beverages"
+      "category": "Beverages",
+      "image": "../resources/photos/coffee.jpg"
     },
     {
       "id": "3",
       "name": "Soft Drink",
       "price": 20,
       "quantity": 60,
-      "category": "Beverages"
+      "category": "Beverages",
+      "image": "../resources/photos/softdrink.jpg"
     },
     {
       "id": "4",
       "name": "Juice",
       "price": 25,
       "quantity": 50,
-      "category": "Beverages"
+      "category": "Beverages",
+      "image": "../resources/photos/juice.jpg"
     },
     {
       "id": "5",
       "name": "Milkshake",
       "price": 30,
       "quantity": 40,
-      "category": "Beverages"
+      "category": "Beverages",
+      "image": "../resources/photos/milkshake.jpg"
     }
   ],
   "users": [
