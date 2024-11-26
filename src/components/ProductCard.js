@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
 const ProductCard = (props) => {
 	const {id, name, price } = props;
@@ -9,6 +10,9 @@ const ProductCard = (props) => {
 	const [cart, setCart] = useState([]);
 
 	const fetchUser = async () => {
+		if (localStorage.getItem("user") === null) {
+			return;
+		}
 		const id = JSON.parse(localStorage.getItem("user")).id;
 		const response = await axios.get(
 			'http://localhost:3000/users/' + id
@@ -38,16 +42,7 @@ const ProductCard = (props) => {
 
 	const increase = () => {
 		setQuantity(quantity + 1);
-		let index = cart.findIndex((item) => item.name === name);
-		if (index === -1) {
-			setCart([...cart, { name: name, price: price, quantity: 1 }]);
-		}
-		else {
-			let temp = [...cart];
-			temp[index].quantity += 1;
-			setCart(temp);
-		}
-		console.log(cart);
+		localStorage.setItem(name, quantity + 1);
 	}
 
 	const decrease = () => {
