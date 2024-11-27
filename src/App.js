@@ -8,6 +8,7 @@ import DairyAndBakery from "./pages/DairyAndBakery";
 import Stationary from "./pages/Stationary";
 import Beverages from "./pages/Beverages";
 import Profile from "./pages/Profile";
+import Basket from "./components/Basket";
 
 const App = () => {
 	return (
@@ -19,7 +20,8 @@ const App = () => {
             <Route path="/dairyandbakery" element={<DairyAndBakery />} />
             <Route path="/stationary" element={<Stationary />} />
             <Route path="/beverages" element={<Beverages />} />
-            <Route path="/profile" element={<Profile />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/basket" element={<Basket />} />
 			</Routes>
 		</BrowserRouter>
 	);
