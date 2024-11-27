@@ -39,7 +39,14 @@ const Login = () => {
 		users.forEach((user) => {
 			if (user.email === email && user.password === password) {
             found = true;
-            localStorage.setItem("user", JSON.stringify(user));
+				localStorage.setItem("user", JSON.stringify(user));
+				if (!user.cart) {
+					user.cart = [];
+				}
+				user.cart.forEach((item) => {
+					localStorage.setItem(item.item, item.quantity);
+				})
+
             alert("Logged in successfully");
             window.location.reload();
 			}

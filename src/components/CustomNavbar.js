@@ -15,6 +15,18 @@ import axios from "axios";
 import Login from "./Login";
 import SignUp from "./SignUp";
 
+const parseCategories = () => {
+	const categoriesData = [
+		{ id: "1", link: "Fruits", category: "Fresh Fruits" },
+		{ id: "2", link: "Vegetables", category: "Fresh Vegetables" },
+		{ id: "3", link: "Stationary", category: "Stationary" },
+		{ id: "4", link: "DairyAndBakery", category: "Dairy & Bakery" },
+		{ id: "5", link: "Beverages", category: "Beverages" },
+	];
+	return categoriesData;
+};
+
+
 const CustomNavbar = () => {
 	const [location, setLocation] = useState("");
 	const [famousLocation, setFamousLocation] = useState([]);
@@ -65,6 +77,7 @@ const CustomNavbar = () => {
 									padding: "0.5rem",
 								}}
 								placeholder="🔍 Search for products"
+
 							/>
 						</Nav>
 						<Nav className="ms-auto d-flex align-items-center">
@@ -117,7 +130,7 @@ const CustomNavbar = () => {
 								{user ? user.email : "Login/Signup"}
 							</Button>
 
-							<Button style={{ background: "white" }}>🛍️</Button>
+							<Button style={{ background: "white" }}><Link to={"/basket"}>🛍️</Link></Button>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
@@ -245,7 +258,7 @@ const CustomNavbar = () => {
 							<Button
 								variant="danger"
 								onClick={() => {
-									localStorage.removeItem("user");
+									localStorage.clear();
 									setUser(null);
 									alert("Logged out successfully");
 								}}
