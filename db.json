@@ -265,32 +265,16 @@
   ],
   "users": [
     {
-      "id": "1",
-      "name": "John Doe",
-      "email": "johndoe@gmail.com",
-      "password": "johndoe123"
-    },
-    {
-      "id": "2",
-      "name": "Jane Smith",
-      "email": "janesmith@gmail.com",
-      "password": "janesmith123"
-    },
-    {
-      "id": "3",
-      "name": "Alice Johnson",
-      "email": "alicejohnson@gmail.com",
-      "password": "alicejohnson123"
-    },
-    {
-      "id": "4",
-      "name": "Bob Brown",
-      "email": "bobbrown@gmail.com",
-      "password": "bobbrown123",
+      "id": "2b57496f-d081-4328-9dca-338132e31725",
+      "name": "Poojan Patel",
+      "phone": "9537530501",
+      "email": "patelpoojan308@gmail.com",
+      "password": "poojan123",
+      "addresses": "1, Kasinagar, Baharmadh, Unjha",
       "cart": [
         {
           "item": "Apple",
-          "quantity": "0"
+          "quantity": "3"
         },
         {
           "item": "Banana",
@@ -310,301 +294,83 @@
         },
         {
           "item": "Potato",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Tomato",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Onion",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Carrot",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Cabbage",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Pen",
-          "quantity": "1"
+          "quantity": 0
         },
         {
           "item": "Pencil",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Eraser",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Sharpener",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Scale",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Milk",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Butter",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Cheese",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Bread",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Cake",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Tea",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Coffee",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Soft Drink",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Juice",
-          "quantity": "0"
+          "quantity": 0
         },
         {
           "item": "Milkshake",
-          "quantity": "0"
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Charlie Davis",
-      "email": "charliedavis@gmail.com",
-      "password": "charliedavis123",
-      "cart": [
-        {
-          "item": "Apple",
-          "quantity": "4"
-        },
-        {
-          "item": "Banana",
-          "quantity": "0"
-        },
-        {
-          "item": "Mango",
-          "quantity": "0"
-        },
-        {
-          "item": "Orange",
-          "quantity": "0"
-        },
-        {
-          "item": "Pineapple",
-          "quantity": "7"
-        },
-        {
-          "item": "Potato",
-          "quantity": "0"
-        },
-        {
-          "item": "Tomato",
-          "quantity": "0"
-        },
-        {
-          "item": "Onion",
-          "quantity": "0"
-        },
-        {
-          "item": "Carrot",
-          "quantity": "0"
-        },
-        {
-          "item": "Cabbage",
-          "quantity": "0"
-        },
-        {
-          "item": "Pen",
-          "quantity": "5"
-        },
-        {
-          "item": "Pencil",
-          "quantity": "3"
-        },
-        {
-          "item": "Eraser",
-          "quantity": "3"
-        },
-        {
-          "item": "Sharpener",
-          "quantity": "4"
-        },
-        {
-          "item": "Scale",
-          "quantity": "0"
-        },
-        {
-          "item": "Milk",
-          "quantity": "0"
-        },
-        {
-          "item": "Butter",
-          "quantity": "0"
-        },
-        {
-          "item": "Cheese",
-          "quantity": "0"
-        },
-        {
-          "item": "Bread",
-          "quantity": "0"
-        },
-        {
-          "item": "Cake",
-          "quantity": "0"
-        },
-        {
-          "item": "Tea",
-          "quantity": "0"
-        },
-        {
-          "item": "Coffee",
-          "quantity": "0"
-        },
-        {
-          "item": "Soft Drink",
-          "quantity": "0"
-        },
-        {
-          "item": "Juice",
-          "quantity": "0"
-        },
-        {
-          "item": "Milkshake",
-          "quantity": "0"
-        }
-      ]
-    },
-    {
-      "id": "5e6e2497-1734-4268-960a-bb845e9b1c55",
-      "email": "gautham@gmail.com",
-      "password": "12345678",
-      "name": "Gautham",
-      "phone": "8465034521",
-      "addresses": [],
-      "cart": [
-        {
-          "item": "Apple",
-          "quantity": "4"
-        },
-        {
-          "item": "Banana",
-          "quantity": "0"
-        },
-        {
-          "item": "Mango",
-          "quantity": "0"
-        },
-        {
-          "item": "Orange",
-          "quantity": "0"
-        },
-        {
-          "item": "Pineapple",
-          "quantity": "0"
-        },
-        {
-          "item": "Potato",
-          "quantity": "2"
-        },
-        {
-          "item": "Tomato",
-          "quantity": "0"
-        },
-        {
-          "item": "Onion",
-          "quantity": "0"
-        },
-        {
-          "item": "Carrot",
-          "quantity": "0"
-        },
-        {
-          "item": "Cabbage",
-          "quantity": "0"
-        },
-        {
-          "item": "Pen",
-          "quantity": "0"
-        },
-        {
-          "item": "Pencil",
-          "quantity": "0"
-        },
-        {
-          "item": "Eraser",
-          "quantity": "0"
-        },
-        {
-          "item": "Sharpener",
-          "quantity": "0"
-        },
-        {
-          "item": "Scale",
-          "quantity": "1"
-        },
-        {
-          "item": "Milk",
-          "quantity": "0"
-        },
-        {
-          "item": "Butter",
-          "quantity": "0"
-        },
-        {
-          "item": "Cheese",
-          "quantity": "3"
-        },
-        {
-          "item": "Bread",
-          "quantity": "0"
-        },
-        {
-          "item": "Cake",
-          "quantity": "0"
-        },
-        {
-          "item": "Tea",
-          "quantity": "0"
-        },
-        {
-          "item": "Coffee",
-          "quantity": "0"
-        },
-        {
-          "item": "Soft Drink",
-          "quantity": "0"
-        },
-        {
-          "item": "Juice",
-          "quantity": "0"
-        },
-        {
-          "item": "Milkshake",
-          "quantity": "0"
+          "quantity": 0
         }
       ]
     }
