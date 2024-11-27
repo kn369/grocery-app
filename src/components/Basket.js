@@ -10,11 +10,15 @@ const Basket = () => {
 	const [basket, setBasket] = useState([]);
 	const [data, setData] = useState([]);
 
-	const fetchBasket = async () => {
+   const fetchBasket = async () => {
+      if (!localStorage.getItem("user")) {
+         return;
+      }
 		const userID = JSON.parse(localStorage.getItem("user")).id;
 		try {
 			const response = await axios.get("http://localhost:3000/users/" + userID);
-			setBasket(response.data.cart);
+         setBasket(response.data.cart);
+         console.log(response.data.cart);
 		} catch (error) {
 			console.log("Error fetching basket...");
 		}
@@ -78,7 +82,7 @@ const Basket = () => {
             >
                <h1>Basket</h1>
                <div>
-                  {basket.map((item) => {
+                  {basket.length > 0 ? basket.map((item) => {
                      if (parseInt(item.quantity) === 0) {
                         return;
                      }
@@ -93,7 +97,7 @@ const Basket = () => {
                            <BasketCard {...item} price={price} />
                         </div>
                      );
-                  })}
+                  }): <p>Your basket is empty</p>}
                </div>
             </Container>
             <hr></hr>
