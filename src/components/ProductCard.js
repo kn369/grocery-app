@@ -30,7 +30,7 @@ const ProductCard = (props) => {
 			setUser(user);
 		}
 	}, [name]);
- 
+
 
 
 	const increase = () => {
