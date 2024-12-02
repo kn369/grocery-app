@@ -1,307 +1,627 @@
 {
-	"famousLocations": [
-		{
-			"id": "1",
-			"name": "Delhi"
-		},
-		{
-			"id": "2",
-			"name": "Mumbai"
-		},
-		{
-			"id": "3",
-			"name": "Kolkata"
-		},
-		{
-			"id": "4",
-			"name": "Chennai"
-		},
-		{
-			"id": "5",
-			"name": "Bangalore"
-		}
-	],
-	"categories": [
-		{
-			"id": "1",
-			"link": "Fruits",
-			"category": "Fresh Fruits",
-			"description": "Fresh fruits are fruits that have not been processed or preserved in any way before being eaten. Fresh fruits are often eaten raw, but may be used in cooking or baking."
-		},
-		{
-			"id": "2",
-			"link": "Vegetables",
-			"category": "Fresh Vegetables",
-			"description": "Fresh vegetables are vegetables that have not been processed or preserved in any way before being eaten. Fresh vegetables are often eaten raw, but may be used in cooking or baking."
-		},
-		{
-			"id": "3",
-			"link": "Stationary",
-			"category": "Stationary",
-			"description": "Stationary items are items that are used in schools, colleges, offices, etc. Stationary items include pens, pencils, erasers, sharpeners, etc."
-		},
-		{
-			"id": "4",
-			"link": "DairyAndBakery",
-			"category": "Dairy & Bakery",
-			"description": "Dairy & Bakery items are items that are made from milk and milk products. Dairy & Bakery items include milk, butter, cheese, bread, etc."
-		},
-		{
-			"id": "5",
-			"link": "Beverages",
-			"category": "Beverages",
-			"description": "Beverages are drinks that are consumed by people. Beverages include tea, coffee, soft drinks, etc."
-		}
-	],
-	"Fruits": [
-		{
-			"id": "1",
-			"name": "Apple",
-			"price": 100,
-			"quantity": 10,
-			"category": "Fresh Fruits",
-			"image": "../resources/photos/apple.jpg"
-		},
-		{
-			"id": "2",
-			"name": "Banana",
-			"price": 50,
-			"quantity": 20,
-			"category": "Fresh Fruits",
-			"image": "../resources/photos/Banana.jpg"
-		},
-		{
-			"id": "3",
-			"name": "Mango",
-			"price": 150,
-			"quantity": 5,
-			"category": "Fresh Fruits",
-			"image": "../resources/photos/mango.jpg"
-		},
-		{
-			"id": "4",
-			"name": "Orange",
-			"price": 80,
-			"quantity": 15,
-			"category": "Fresh Fruits",
-			"image": "../resources/photos/orange.jpg"
-		},
-		{
-			"id": "5",
-			"name": "Pineapple",
-			"price": 120,
-			"quantity": 8,
-			"category": "Fresh Fruits",
-			"image": "../resources/photos/pineapple.jpg"
-		}
-	],
-	"Stationary": [
-		{
-			"id": "6",
-			"name": "Pen",
-			"price": 10,
-			"quantity": 100,
-			"category": "Stationary",
-			"image": "../resources/photos/pen.jpg"
-		},
-		{
-			"id": "7",
-			"name": "Pencil",
-			"price": 5,
-			"quantity": 200,
-			"category": "Stationary",
-			"image": "../resources/photos/pencil.jpg"
-		},
-		{
-			"id": "8",
-			"name": "Eraser",
-			"price": 2,
-			"quantity": 300,
-			"category": "Stationary",
-			"image": "../resources/photos/eraser.jpg"
-		},
-		{
-			"id": "9",
-			"name": "Sharpener",
-			"price": 3,
-			"quantity": 150,
-			"category": "Stationary",
-			"image": "../resources/photos/sharpner.jpg"
-		},
-		{
-			"id": "10",
-			"name": "Scale",
-			"price": 5,
-			"quantity": 100,
-			"category": "Stationary",
-			"image": "../resources/photos/scale.jpg"
-		}
-	],
-	"Vegetables": [
-		{
-			"id": "11",
-			"name": "Potato",
-			"price": 20,
-			"quantity": 50,
-			"category": "Fresh Vegetables",
-			"image": "../resources/photos/potato.jpg"
-		},
-		{
-			"id": "12",
-			"name": "Tomato",
-			"price": 30,
-			"quantity": 40,
-			"category": "Fresh Vegetables",
-			"image": "../resources/photos/tomato.jpg"
-		},
-		{
-			"id": "13",
-			"name": "Onion",
-			"price": 25,
-			"quantity": 60,
-			"category": "Fresh Vegetables",
-			"image": "../resources/photos/onion.jpg"
-		},
-		{
-			"id": "14",
-			"name": "Carrot",
-			"price": 40,
-			"quantity": 30,
-			"category": "Fresh Vegetables",
-			"image": "../resources/photos/carrot.jpg"
-		},
-		{
-			"id": "15",
-			"name": "Cabbage",
-			"price": 35,
-			"quantity": 20,
-			"category": "Fresh Vegetables",
-			"image": "../resources/photos/cabbage.jpg"
-		}
-	],
-	"DairyAndBakery": [
-		{
-			"id": "16",
-			"name": "Milk",
-			"price": 25,
-			"quantity": 50,
-			"category": "Dairy & Bakery",
-			"image": "../resources/photos/milk.jpg"
-		},
-		{
-			"id": "17",
-			"name": "Butter",
-			"price": 50,
-			"quantity": 30,
-			"category": "Dairy & Bakery",
-			"image": "../resources/photos/butter.jpg"
-		},
-		{
-			"id": "18",
-			"name": "Cheese",
-			"price": 100,
-			"quantity": 20,
-			"category": "Dairy & Bakery",
-			"image": "../resources/photos/cheese.jpg"
-		},
-		{
-			"id": "19",
-			"name": "Bread",
-			"price": 20,
-			"quantity": 40,
-			"category": "Dairy & Bakery",
-			"image": "../resources/photos/bread.jpg"
-		},
-		{
-			"id": "20",
-			"name": "Cake",
-			"price": 150,
-			"quantity": 10,
-			"category": "Dairy & Bakery",
-			"image": "../resources/photos/cake.jpg"
-		}
-	],
-	"Beverages": [
-		{
-			"id": "21",
-			"name": "Tea",
-			"price": 10,
-			"quantity": 100,
-			"category": "Beverages",
-			"image": "../resources/photos/tea.jpg"
-		},
-		{
-			"id": "22",
-			"name": "Coffee",
-			"price": 15,
-			"quantity": 80,
-			"category": "Beverages",
-			"image": "../resources/photos/coffee.jpg"
-		},
-		{
-			"id": "23",
-			"name": "Soft Drink",
-			"price": 20,
-			"quantity": 60,
-			"category": "Beverages",
-			"image": "../resources/photos/softdrink.jpg"
-		},
-		{
-			"id": "24",
-			"name": "Juice",
-			"price": 25,
-			"quantity": 50,
-			"category": "Beverages",
-			"image": "../resources/photos/juice.jpg"
-		},
-		{
-			"id": "25",
-			"name": "Milkshake",
-			"price": 30,
-			"quantity": 40,
-			"category": "Beverages",
-			"image": "../resources/photos/milkshake.jpg"
-		}
-	],
-	"users": [
-		{
-			"id": "1",
-			"name": "John Doe",
-			"email": "johndoe@gmail.com",
-			"password": "johndoe123"
-		},
-		{
-			"id": "2",
-			"name": "Jane Smith",
-			"email": "janesmith@gmail.com",
-			"password": "janesmith123"
-		},
-		{
-			"id": "3",
-			"name": "Alice Johnson",
-			"email": "alicejohnson@gmail.com",
-			"password": "alicejohnson123"
-		},
-		{
-			"id": "4",
-			"name": "Bob Brown",
-			"email": "bobbrown@gmail.com",
-			"password": "bobbrown123"
-		},
-		{
-			"id": "5",
-			"name": "Charlie Davis",
-			"email": "charliedavis@gmail.com",
-			"password": "charliedavis123",
-			"cart": []
-		},
-		{
-			"id": "5e6e2497-1734-4268-960a-bb845e9b1c55",
-			"email": "gautham@gmail.com",
-			"password": "12345678",
-			"name": "Gautham",
-			"phone": "8465034521",
-			"addresses": []
-		}
-	]
+  "famousLocations": [
+    {
+      "id": "1",
+      "name": "Delhi"
+    },
+    {
+      "id": "2",
+      "name": "Mumbai"
+    },
+    {
+      "id": "3",
+      "name": "Kolkata"
+    },
+    {
+      "id": "4",
+      "name": "Chennai"
+    },
+    {
+      "id": "5",
+      "name": "Bangalore"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "link": "Fruits",
+      "category": "Fresh Fruits",
+      "description": "Fresh fruits are fruits that have not been processed or preserved in any way before being eaten. Fresh fruits are often eaten raw, but may be used in cooking or baking."
+    },
+    {
+      "id": "2",
+      "link": "Vegetables",
+      "category": "Fresh Vegetables",
+      "description": "Fresh vegetables are vegetables that have not been processed or preserved in any way before being eaten. Fresh vegetables are often eaten raw, but may be used in cooking or baking."
+    },
+    {
+      "id": "3",
+      "link": "Stationary",
+      "category": "Stationary",
+      "description": "Stationary items are items that are used in schools, colleges, offices, etc. Stationary items include pens, pencils, erasers, sharpeners, etc."
+    },
+    {
+      "id": "4",
+      "link": "DairyAndBakery",
+      "category": "Dairy & Bakery",
+      "description": "Dairy & Bakery items are items that are made from milk and milk products. Dairy & Bakery items include milk, butter, cheese, bread, etc."
+    },
+    {
+      "id": "5",
+      "link": "Beverages",
+      "category": "Beverages",
+      "description": "Beverages are drinks that are consumed by people. Beverages include tea, coffee, soft drinks, etc."
+    }
+  ],
+  "Fruits": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "price": 100,
+      "quantity": 10,
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/apple.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Banana",
+      "price": 50,
+      "quantity": 20,
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/Banana.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Mango",
+      "price": 150,
+      "quantity": 5,
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/mango.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Orange",
+      "price": 80,
+      "quantity": 15,
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/orange.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Pineapple",
+      "price": 120,
+      "quantity": 8,
+      "category": "Fresh Fruits",
+      "image": "../resources/photos/pineapple.jpg"
+    }
+  ],
+  "Stationary": [
+    {
+      "id": "6",
+      "name": "Pen",
+      "price": 10,
+      "quantity": 100,
+      "category": "Stationary",
+      "image": "../resources/photos/pen.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Pencil",
+      "price": 5,
+      "quantity": 200,
+      "category": "Stationary",
+      "image": "../resources/photos/pencil.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Eraser",
+      "price": 2,
+      "quantity": 300,
+      "category": "Stationary",
+      "image": "../resources/photos/eraser.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Sharpener",
+      "price": 3,
+      "quantity": 150,
+      "category": "Stationary",
+      "image": "../resources/photos/sharpner.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Scale",
+      "price": 5,
+      "quantity": 100,
+      "category": "Stationary",
+      "image": "../resources/photos/scale.jpg"
+    }
+  ],
+  "Vegetables": [
+    {
+      "id": "11",
+      "name": "Potato",
+      "price": 20,
+      "quantity": 50,
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/potato.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Tomato",
+      "price": 30,
+      "quantity": 40,
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/tomato.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Onion",
+      "price": 25,
+      "quantity": 60,
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/onion.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Carrot",
+      "price": 40,
+      "quantity": 30,
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/carrot.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Cabbage",
+      "price": 35,
+      "quantity": 20,
+      "category": "Fresh Vegetables",
+      "image": "../resources/photos/cabbage.jpg"
+    }
+  ],
+  "DairyAndBakery": [
+    {
+      "id": "16",
+      "name": "Milk",
+      "price": 25,
+      "quantity": 50,
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/milk.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Butter",
+      "price": 50,
+      "quantity": 30,
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/butter.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Cheese",
+      "price": 100,
+      "quantity": 20,
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/cheese.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Bread",
+      "price": 20,
+      "quantity": 40,
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/bread.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Cake",
+      "price": 150,
+      "quantity": 10,
+      "category": "Dairy & Bakery",
+      "image": "../resources/photos/cake.jpg"
+    }
+  ],
+  "Beverages": [
+    {
+      "id": "21",
+      "name": "Tea",
+      "price": 10,
+      "quantity": 100,
+      "category": "Beverages",
+      "image": "../resources/photos/tea.jpg"
+    },
+    {
+      "id": "22",
+      "name": "Coffee",
+      "price": 15,
+      "quantity": 80,
+      "category": "Beverages",
+      "image": "../resources/photos/coffee.jpg"
+    },
+    {
+      "id": "23",
+      "name": "Soft Drink",
+      "price": 20,
+      "quantity": 60,
+      "category": "Beverages",
+      "image": "../resources/photos/softdrink.jpg"
+    },
+    {
+      "id": "24",
+      "name": "Juice",
+      "price": 25,
+      "quantity": 50,
+      "category": "Beverages",
+      "image": "../resources/photos/juice.jpg"
+    },
+    {
+      "id": "25",
+      "name": "Milkshake",
+      "price": 30,
+      "quantity": 40,
+      "category": "Beverages",
+      "image": "../resources/photos/milkshake.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "johndoe123"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "janesmith@gmail.com",
+      "password": "janesmith123"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "email": "alicejohnson@gmail.com",
+      "password": "alicejohnson123"
+    },
+    {
+      "id": "4",
+      "name": "Bob Brown",
+      "email": "bobbrown@gmail.com",
+      "password": "bobbrown123",
+      "cart": [
+        {
+          "item": "Apple",
+          "quantity": "0"
+        },
+        {
+          "item": "Banana",
+          "quantity": "0"
+        },
+        {
+          "item": "Mango",
+          "quantity": "0"
+        },
+        {
+          "item": "Orange",
+          "quantity": "0"
+        },
+        {
+          "item": "Pineapple",
+          "quantity": "0"
+        },
+        {
+          "item": "Potato",
+          "quantity": "0"
+        },
+        {
+          "item": "Tomato",
+          "quantity": "0"
+        },
+        {
+          "item": "Onion",
+          "quantity": "0"
+        },
+        {
+          "item": "Carrot",
+          "quantity": "0"
+        },
+        {
+          "item": "Cabbage",
+          "quantity": "0"
+        },
+        {
+          "item": "Pen",
+          "quantity": "1"
+        },
+        {
+          "item": "Pencil",
+          "quantity": "0"
+        },
+        {
+          "item": "Eraser",
+          "quantity": "0"
+        },
+        {
+          "item": "Sharpener",
+          "quantity": "0"
+        },
+        {
+          "item": "Scale",
+          "quantity": "0"
+        },
+        {
+          "item": "Milk",
+          "quantity": "0"
+        },
+        {
+          "item": "Butter",
+          "quantity": "0"
+        },
+        {
+          "item": "Cheese",
+          "quantity": "0"
+        },
+        {
+          "item": "Bread",
+          "quantity": "0"
+        },
+        {
+          "item": "Cake",
+          "quantity": "0"
+        },
+        {
+          "item": "Tea",
+          "quantity": "0"
+        },
+        {
+          "item": "Coffee",
+          "quantity": "0"
+        },
+        {
+          "item": "Soft Drink",
+          "quantity": "0"
+        },
+        {
+          "item": "Juice",
+          "quantity": "0"
+        },
+        {
+          "item": "Milkshake",
+          "quantity": "0"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Charlie Davis",
+      "email": "charliedavis@gmail.com",
+      "password": "charliedavis123",
+      "cart": [
+        {
+          "item": "Apple",
+          "quantity": "4"
+        },
+        {
+          "item": "Banana",
+          "quantity": "0"
+        },
+        {
+          "item": "Mango",
+          "quantity": "0"
+        },
+        {
+          "item": "Orange",
+          "quantity": "0"
+        },
+        {
+          "item": "Pineapple",
+          "quantity": "7"
+        },
+        {
+          "item": "Potato",
+          "quantity": "0"
+        },
+        {
+          "item": "Tomato",
+          "quantity": "0"
+        },
+        {
+          "item": "Onion",
+          "quantity": "0"
+        },
+        {
+          "item": "Carrot",
+          "quantity": "0"
+        },
+        {
+          "item": "Cabbage",
+          "quantity": "0"
+        },
+        {
+          "item": "Pen",
+          "quantity": "5"
+        },
+        {
+          "item": "Pencil",
+          "quantity": "3"
+        },
+        {
+          "item": "Eraser",
+          "quantity": "3"
+        },
+        {
+          "item": "Sharpener",
+          "quantity": "4"
+        },
+        {
+          "item": "Scale",
+          "quantity": "0"
+        },
+        {
+          "item": "Milk",
+          "quantity": "0"
+        },
+        {
+          "item": "Butter",
+          "quantity": "0"
+        },
+        {
+          "item": "Cheese",
+          "quantity": "0"
+        },
+        {
+          "item": "Bread",
+          "quantity": "0"
+        },
+        {
+          "item": "Cake",
+          "quantity": "0"
+        },
+        {
+          "item": "Tea",
+          "quantity": "0"
+        },
+        {
+          "item": "Coffee",
+          "quantity": "0"
+        },
+        {
+          "item": "Soft Drink",
+          "quantity": "0"
+        },
+        {
+          "item": "Juice",
+          "quantity": "0"
+        },
+        {
+          "item": "Milkshake",
+          "quantity": "0"
+        }
+      ]
+    },
+    {
+      "id": "5e6e2497-1734-4268-960a-bb845e9b1c55",
+      "email": "gautham@gmail.com",
+      "password": "12345678",
+      "name": "Gautham",
+      "phone": "8465034534",
+      "addresses": [
+        "guntur",
+        "Vijaywada"
+      ],
+      "cart": [
+        {
+          "item": "Apple",
+          "quantity": 3
+        },
+        {
+          "item": "Banana",
+          "quantity": 0
+        },
+        {
+          "item": "Mango",
+          "quantity": 0
+        },
+        {
+          "item": "Orange",
+          "quantity": 0
+        },
+        {
+          "item": "Pineapple",
+          "quantity": 0
+        },
+        {
+          "item": "Potato",
+          "quantity": 4
+        },
+        {
+          "item": "Tomato",
+          "quantity": 0
+        },
+        {
+          "item": "Onion",
+          "quantity": 0
+        },
+        {
+          "item": "Carrot",
+          "quantity": 0
+        },
+        {
+          "item": "Cabbage",
+          "quantity": 0
+        },
+        {
+          "item": "Pen",
+          "quantity": 4
+        },
+        {
+          "item": "Pencil",
+          "quantity": 0
+        },
+        {
+          "item": "Eraser",
+          "quantity": 0
+        },
+        {
+          "item": "Sharpener",
+          "quantity": 0
+        },
+        {
+          "item": "Scale",
+          "quantity": 0
+        },
+        {
+          "item": "Milk",
+          "quantity": 0
+        },
+        {
+          "item": "Butter",
+          "quantity": 4
+        },
+        {
+          "item": "Cheese",
+          "quantity": 0
+        },
+        {
+          "item": "Bread",
+          "quantity": 0
+        },
+        {
+          "item": "Cake",
+          "quantity": 0
+        },
+        {
+          "item": "Tea",
+          "quantity": 7
+        },
+        {
+          "item": "Coffee",
+          "quantity": 0
+        },
+        {
+          "item": "Soft Drink",
+          "quantity": 2
+        },
+        {
+          "item": "Juice",
+          "quantity": 0
+        },
+        {
+          "item": "Milkshake",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "6e903f28-83bc-47fb-a9cb-8bd7901bedb5",
+      "email": "abc@gmail.com",
+      "password": "12345678",
+      "cart": [],
+      "name": "abc",
+      "phone": "9347523847",
+      "addresses": [
+        "Vijaywada",
+        "Guntur"
+      ]
+    }
+  ]
 }

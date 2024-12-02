@@ -6,15 +6,15 @@ const BasketCard = (props) => {
 
 	return (
 		<>
-			<Card style={{ marginTop: "1rem" }}>
+			<Card style={{marginTop: "1rem"}}>
 				<Card.Body
 					style={{
 						display: "flex",
 						justifyContent: "space-between",
 						alignItems: "center",
-						padding: "1rem",
-						fontSize: "1rem",
-						margin: "0.5rem",
+                  padding: "1rem",
+                  fontSize: "1rem",
+                  margin: "0.5rem"
 					}}
 				>
 					<div>
@@ -23,7 +23,7 @@ const BasketCard = (props) => {
 					</div>
 					<Card.Text>{"Rs " + price + "/-"}</Card.Text>
 				</Card.Body>
-			</Card>
+         </Card>
 		</>
 	);
 };
