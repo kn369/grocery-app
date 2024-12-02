@@ -1,69 +1,66 @@
 import React from "react";
 import CustomNavbar from "./CustomNavbar";
-import { Container } from "react-bootstrap";
+import { Container, Table, Button } from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import BasketCard from "./BasketCard";
-import { BsPrefixComponent } from "react-bootstrap/esm/helpers";
 
 const Basket = () => {
-	const [basket, setBasket] = useState([]);
-	const [data, setData] = useState([]);
+   const [basket, setBasket] = useState([]);
+   const [data, setData] = useState([]);
 
-	const fetchBasket = async () => {
-		const userID = JSON.parse(localStorage.getItem("user")).id;
-		try {
-			const response = await axios.get("http://localhost:3000/users/" + userID);
-			setBasket(response.data.cart);
-		} catch (error) {
-			console.log("Error fetching basket...");
-		}
-	};
+   const fetchBasket = async () => {
+      const userID = JSON.parse(localStorage.getItem("user")).id;
+      try {
+         const response = await axios.get("http://localhost:3000/users/" + userID);
+         setBasket(response.data.cart);
+      } catch (error) {
+         console.log("Error fetching basket...");
+      }
+   };
 
-	const fetchCategories = async () => {
-		try {
-			const response = await axios.get("http://localhost:3000/categories");
-			const categories = response.data.map((item) => item.link);
-			return categories;
-			return response.data;
-		} catch (error) {
-			console.log("Error fetching categories...", error);
-		}
-	};
+   const fetchCategories = async () => {
+      try {
+         const response = await axios.get("http://localhost:3000/categories");
+         const categories = response.data.map((item) => item.link);
+         return categories;
+      } catch (error) {
+         console.log("Error fetching categories...", error);
+      }
+   };
 
-	const fetchProducts = async (category) => {
-		try {
-			const response = await axios.get("http://localhost:3000/" + category);
-			return response.data.map((item) => {
-				return {
-					name: item.name,
-					price: item.price,
-					img: item.img,
-					category: category,
-				};
-			});
-		} catch (error) {
-			console.log("Error fetching products...", error);
-		}
-	};
+   const fetchProducts = async (category) => {
+      try {
+         const response = await axios.get("http://localhost:3000/" + category);
+         return response.data.map((item) => {
+            return {
+               name: item.name,
+               price: item.price,
+               img: item.img,
+               category: category,
+            };
+         });
+      } catch (error) {
+         console.log("Error fetching products...", error);
+      }
+   };
 
-	const fetchData = async () => {
-		const categories = await fetchCategories();
-		const data = [];
-		for (const category of categories) {
-			const products = await fetchProducts(category);
-			data.push(...products);
-		}
-		setData(data);
-	};
+   const fetchData = async () => {
+      const categories = await fetchCategories();
+      const data = [];
+      for (const category of categories) {
+         const products = await fetchProducts(category);
+         data.push(...products);
+      }
+      setData(data);
+   };
 
-	useEffect(() => {
-		fetchBasket();
-	}, []);
+   useEffect(() => {
+      fetchBasket();
+   }, []);
 
-	useEffect(() => {
-		fetchData();
-	}, []);
+   useEffect(() => {
+      fetchData();
+   }, []);
 
 	return (
 		<>
