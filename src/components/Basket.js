@@ -3,6 +3,7 @@ import CustomNavbar from "./CustomNavbar";
 import { Container, Table, Button } from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import BasketCard from "./BasketCard";
 
 const Basket = () => {
    const [basket, setBasket] = useState([]);
